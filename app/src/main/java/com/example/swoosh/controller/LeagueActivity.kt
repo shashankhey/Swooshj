@@ -1,15 +1,16 @@
-package com.example.swoosh
+package com.example.swoosh.controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.swoosh.utilities.EXTRA_LEAGUE
+import com.example.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedLeague = ""
+    private var selectedLeague = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,21 +20,18 @@ class LeagueActivity : BaseActivity() {
     fun onMensClicked(view: View) {
         womenLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
-
         selectedLeague = "mens"
     }
 
     fun onWomenClicked(view: View) {
         menLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
-
         selectedLeague = "womens"
     }
 
     fun onCoedClicked(view: View) {
         womenLeagueBtn.isChecked = false
         menLeagueBtn.isChecked = false
-
         selectedLeague = "co-ed"
     }
 
